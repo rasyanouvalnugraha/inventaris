@@ -32,14 +32,14 @@
             <form action="{{ route('login') }}" method="POST" class="mulish">
                 @method('POST')
                 @csrf
-                <label class="block mb-2 text-white">Email:</label>
+                <label class="block mb-2 text-white">Username:</label>
                 @error('email')
-                    <div class="text-red-500 mb-2">Invalid Email</div>
+                    <div class="text-red-500 mb-2">Invalid Username</div>
                 @enderror
                 <div class="relative flex items-center">
                     <img src="{{ asset('asset/Person.svg') }}" alt="" class="absolute left-3 w-5 h-5 top-3">
                     <input type="text" class="w-full pl-10 p-2 mb-4 border border-gray-300 rounded"
-                        placeholder="username" name="email" required value="{{ old('email') }}">
+                        placeholder="username" name="name" required value="">
                 </div>
 
                 <label class="block mb-2 text-white">Password:</label>

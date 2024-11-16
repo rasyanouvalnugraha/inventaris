@@ -36,14 +36,14 @@
                                     class="ml-2 p-1 h-8 w-8 bg-user rounded-full">
                             </a>
                             <!-- Dropdown Menu -->
-                            <div
+                            {{-- <div
                                 class="absolute right-0 mt-2 w-28 bg-white rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <form action="{{ route('logout')}}" method="GET">
                                     @csrf
                                     <a href="{{ route('logout')}}"
                                         class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Logout</a>
                                 </form>
-                            </div>
+                            </div> --}}
                         </div>
                     </li>
                 </ul>
@@ -60,12 +60,10 @@
             <!-- Teks "LISA" dan deskripsi dalam satu baris -->
             <div class="flex justify-center items-center text-white mx-auto max-w-4xl" data-aos="fade-up"
                 data-aos-duration="1000">
-                <p class="text-xl flex flex-row">
-                    <span class="bg-lisa-text mulish-extend text-xl py-1 px-2">LISA</span>
-                    <span class="text-center inline-block py-1 px-2">atau List Inventaris Stok Aset dibuat
-                        untuk memudahkan pencatatan dan pemantauan semua stok
-                        dan aset pada ruangan PDS</span>
-                </p>
+                <span class="text-center inline-block py-1 px-2">
+                    <span class="bg-lisa-text mulish-extend text-md">LISA</span> atau List Inventaris Stok Aset dibuat
+                    untuk memudahkan pencatatan dan pemantauan semua stok dan aset pada ruangan PDS
+                </span>
 
             </div>
             <!-- Footer Section -->

@@ -27,7 +27,11 @@ Route::post('/login', [AuthController::class, 'login'])->name('login');
 // Hanya dapat diakses oleh pengguna yang login
 Route::middleware(['auth'])->group(function () {
     // Route untuk dashboard
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     // Route untuk logout
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+});
+
+// Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', function(){
+    return view('dashboard');
 });
