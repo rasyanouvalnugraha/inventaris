@@ -1,0 +1,42 @@
+/* Styling untuk teks info jumlah entri */
+.dataTables_info {
+    margin-left: 10px;
+    font-size: 0.4;
+    font-family: "Mulish", sans-serif;
+    font-weight: 700;
+    color: #2D3748;
+    /* Warna teks */
+    font-weight: bold;
+}
+
+/* Styling untuk pagination */
+.dataTables_paginate .paginate_button {
+    font-size: 0.9rem;
+    font-family: "Mulish", sans-serif;
+    font-weight: 700;
+    color: #3182CE;
+    /* Warna tombol pagination */
+    padding: 5px 10px;
+    margin: 2px;
+    border-radius: 4px;
+    background-color: #E2E8F0;
+    /* Warna background tombol */
+}
+
+/* Styling untuk tombol aktif pada pagination */
+.dataTables_paginate .paginate_button.current {
+    background-color: #3182CE;
+    /* Warna tombol aktif */
+    color: #FFF;
+    /* Warna teks tombol aktif */
+    font-weight: bold;
+}
+
+/* Styling untuk teks "Tidak ada data" */
+.dataTables_empty {
+    font-size: 1rem;
+    font-family: "Mulish", sans-serif;
+    font-weight: 700;
+    color: #E53E3E;
+    /* Warna teks */
+}

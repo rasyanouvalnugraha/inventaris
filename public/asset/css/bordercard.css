@@ -1,0 +1,58 @@
+.card-1 {
+    border-radius: 10px;
+    background: linear-gradient(to right, #FFC23A, #51D2FF);
+}
+
+.card-1>.content {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-1>.content>img {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    margin: auto;
+}
+
+
+.card-2 {
+    border-radius: 10px;
+    background: linear-gradient(to right, #51D2FF, #6743FF);
+}
+
+.card-2>.content {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-2>.content>img {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    margin: auto;
+}
+
+
+.card-3 {
+    border-radius: 10px;
+    background: linear-gradient(to right, #6743FF, #FF60B5);
+}
+
+.card-3>.content {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-3>.content>img {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    margin: auto;
+}

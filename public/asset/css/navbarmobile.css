@@ -1,0 +1,47 @@
+.card {
+    background: #212121;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+}
+
+.icon-1 {
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.icon-1:hover {
+    background: linear-gradient(to right, #FFC23A, #51D2FF);
+    transform: translatey(-10px);
+    border-radius: 100%;
+}
+
+.icon-2 {
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.icon-2:hover {
+    background: linear-gradient(to right,#51D2FF,#6743FF );
+    transform: translatey(-10px);
+    border-radius: 100%;
+}
+
+.icon-3 {
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.icon-3:hover {
+    background: linear-gradient(to right, #6743FF, #FF60B5);
+    transform: translatey(-10px);
+    border-radius: 100%;
+}

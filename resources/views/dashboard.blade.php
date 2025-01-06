@@ -13,46 +13,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="{{ asset('asset/css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('asset/css/font.css') }}">
 </head>
 
 <body class="bg-black">
 
     <main class="flex flex-col min-h-screen">
 
-        <!-- Navbar Section -->
-        <nav class="rounded">
-            <div class="bg-navbar flex justify-between px-10 py-4">
-                <h1 class="text-3xl bg-lisa mulish mt-1">LISA</h1>
-                <ul class="flex gap-24 text-md items-center mulish-extend">
-                    <li class="text-white hover:bg-blue-300 ease-in-out duration-400"><a href="#">History</a></li>
-                    <li class="text-white hover:bg-blue-300 ease-in-out duration-400"><a href="#">Manage</a></li>
-                    <li class="text-white hover:bg-blue-300 ease-in-out duration-400"><a href="#">Item</a></li>
-                    <!-- Admin Dropdown -->
-                    <li class="relative">
-                        <div class="bg-white rounded-full p-2 cursor-pointer group">
-                            <a href="#" class="flex items-center">
-                                <p class="mt-1 pl-2">Admin</p>
-                                <img src="{{ asset('asset/User.svg') }}" alt="User"
-                                    class="ml-2 p-1 h-8 w-8 bg-user rounded-full">
-                            </a>
-                            <!-- Dropdown Menu -->
-                            {{-- <div
-                                class="absolute right-0 mt-2 w-28 bg-white rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <form action="{{ route('logout')}}" method="GET">
-                                    @csrf
-                                    <a href="{{ route('logout')}}"
-                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Logout</a>
-                                </form>
-                            </div> --}}
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <div class="sm:block hidden">
+            <x-navbar />
+        </div>
+        <div class="sm:hidden block">
+            <x-header-mobile/>
+        </div>
 
         <!-- Main Content -->
-        <section class="flex flex-col justify-center items-center py-10">
-            <h1 class="text-white text-center p-14 m-10 text-7xl mulish-extend" data-aos="fade-up"
+        <section class="flex flex-col justify-center items-center pb-10">
+            <h1 class="text-white text-center sm:p-14 m-10 sm:m-0 text-7xl font-mulish-800" data-aos="fade-up"
                 data-aos-duration="6000">
                 LISA
             </h1>
@@ -61,15 +39,29 @@
             <div class="flex justify-center items-center text-white mx-auto max-w-4xl" data-aos="fade-up"
                 data-aos-duration="1000">
                 <span class="text-center inline-block py-1 px-2">
-                    <span class="bg-lisa-text mulish-extend text-md">LISA</span> atau List Inventaris Stok Aset dibuat
+                    <span class="bg-lisa-text font-mulish-700 text-md">LISA</span> atau List Inventaris Stok Aset dibuat
                     untuk memudahkan pencatatan dan pemantauan semua stok dan aset pada ruangan PDS
                 </span>
-
             </div>
+
+            <div>
+                <div class="sm:block hidden">
+                    <x-card/>
+                </div>
+            </div>
+
+            <div class="">
+                <div class="sm:hidden flex">
+                    <x-card-mobile />
+                </div>
+            </div>
+
             <!-- Footer Section -->
-            <footer class="text-white text-center py-6" data-aos="fade-up" data-aos-duration="1000">
+            {{-- <footer class="fixed bottom-0 text-white text-center py-6" data-aos="fade-up" data-aos-duration="1000">
                 <h1>Copyright. Build by SMKN 65 Student</h1>
-            </footer>
+            </footer> --}}
+
+
         </section>
 
     </main>
@@ -84,38 +76,8 @@
 </body>
 
 <style>
-    .bg-lisa {
-        background: linear-gradient(63deg, rgba(255, 194, 58, 1) 0%, rgba(81, 210, 255, 1) 33%, rgba(103, 67, 255, 1) 66%, rgba(255, 96, 181, 1) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .bg-lisa-text {
-        background: linear-gradient(90deg, rgba(255, 194, 58, 1) 0%, rgba(81, 210, 255, 1) 33%, rgba(103, 67, 255, 1) 66%, rgba(255, 96, 181, 1) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .mulish {
-        font-family: "Mulish", sans-serif;
-        font-weight: 900;
-    }
-
-    .mulish-extend {
-        font-family: "Mulish", sans-serif;
-        font-weight: 700;
-    }
-
-    .bg-navbar {
-        background-color: #272727d5;
-    }
-
-    .bg-user {
-        background: linear-gradient(135deg, rgba(255, 194, 58, 1) 0%, rgba(81, 210, 255, 1) 33%, rgba(103, 67, 255, 1) 66%, rgba(255, 96, 181, 1) 100%);
-    }
-
-    body {
-        overflow: hidden;
+    ::-webkit-scrollbar {
+        display: none;
     }
 </style>
 

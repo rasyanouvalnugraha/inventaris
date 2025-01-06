@@ -14,13 +14,7 @@
 </head>
 
 <body>
-    <main>
-        <section>
-            <div>
-                <h1 class="">LISA</h1>
-            </div>
-        </section>
-    </main>
+    
 </body>
 
 </html>

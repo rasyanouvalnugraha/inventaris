@@ -7,10 +7,9 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
-    // public function showloginForm () {
-    //     return view('index');
-    // }
-
+    public function showloginForm () {
+        return view('index');
+    }
 
     // public function login(Request $req) {
     //     $req->validate([
@@ -23,12 +22,14 @@ class AuthController extends Controller
     //     if (auth()->attempt($credentials)) {
     //         return view ('/dashboard');
     //     } else {
-    //         return back()->with('message', 'Gagal Login'); // Return an error message if login fails
+    //         return back()->withErrors([
+    //             'login' => 'Gagal Login'
+    //         ]);
     //     }
     // }
 
-    // public function logout() {
-    //     auth()->logout();
-    //     return redirect()->route('showloginForm'); // Redirect to the login page
-    // }
+    public function logout() {
+        auth()->logout();
+        return redirect()->route('showloginForm'); 
+    }
 }
